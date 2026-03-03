@@ -25,12 +25,24 @@ const addCalender = (meetingDetail) => {
 
 // promise chaining
 detailPromise
-  .then(addCalender)
+  .then(addCalender) // syntex  .then((meetingDetail) => addCalender(meetingDetail))
   .then((calender) => {
     console.log(calender);
   })
   .catch((err) => {
     console.log(err.message);
   });
+
+/* 
+  promise.all([promise1, promise2])
+      .then((res)=>{
+        console.log(res);
+        });  akhane sobgulo akshathe suru hoy kaj shesh hobar por array akare ashe shobgulo.
+  
+  promise.race([promise1, promise2])
+      .then((res)=>{
+        console.log(res);
+        }); akhaneo kaj shuru hoy akshathe, kintu jeta age shesh hoy sheta result e ashe. kintu kaj shobgulotei hoy.
+  */
 
 console.log("This is synchronous part");
