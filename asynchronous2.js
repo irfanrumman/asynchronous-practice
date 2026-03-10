@@ -10,7 +10,7 @@ function process(customer, callback) {
   setTimeout(() => {
     console.log(`cooking done for ${customer}...`);
     console.log(`processed order from ${customer}`);
-    callback(customer);
+    callback();
   }, 4000);
 }
 
@@ -19,8 +19,8 @@ function completeOrder(customer) {
 }
 
 // callback pattern
-tackOrder("customer 1", (customer) => {
-  process(customer, (customer) => {
+tackOrder("Sumit Saha", (customer) => {
+  process(customer, () => {
     completeOrder(customer);
   });
 });
